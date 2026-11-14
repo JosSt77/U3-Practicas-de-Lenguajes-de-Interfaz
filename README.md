@@ -37,7 +37,7 @@ Pide una cadena por consola (`capturarCadena`), valida su tamaño con un procedi
 - En `funcion2`, `[ESP]` contiene la dirección de retorno a `funcion1` (el último valor guardado, en la cima) y `[ESP+4]` contiene la de `main` (el primero, debajo de ella), los regresos ocurren en orden LIFO.
 - Al regresar de `funcion2`, `ESP` y `[ESP]` vuelven a tener los valores que tenían al entrar a `funcion1`; al regresar a `main`, `ESP` es igual al inicial. La pila queda equilibrada.
 
-## 4. [Manejo de la Pila Maual](https://github.com/JosSt77/U3-Practicas-de-Lenguajes-de-Interfaz/blob/main/04%20-%20MANEJO%20DE%20LA%20PILA%20MANUAL/04%20-%20MANEJO%20DE%20LA%20PILA%20MANUAL/main.asm)
+## 4. [Manejo de la Pila Manual](https://github.com/JosSt77/U3-Practicas-de-Lenguajes-de-Interfaz/blob/main/04%20-%20MANEJO%20DE%20LA%20PILA%20MANUAL/04%20-%20MANEJO%20DE%20LA%20PILA%20MANUAL/main.asm)
 
 `main` apila dos argumentos (3 y 25) y llama a `MultiplicacionPila`. El procedimiento fija `EBP` como referencia, conserva `EBX` con `PUSH`/`POP`, lee los argumentos con `[ebp+8]` y `[ebp+12]`, los multiplica con `imul` y regresa con `ret 8` para retirar los argumentos de la pila.
 
